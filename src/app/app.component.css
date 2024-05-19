@@ -128,9 +128,9 @@
   height: 32px;
 }
 .logo-packdiscount-icon {
-  position: absolute;
+  position: relative;
   top: 0px;
-  left: 105px;
+  left: 110px;
   width: 263px;
   height: 47px;
   object-fit: cover;
@@ -292,4 +292,13 @@ table {
 .input {
   outline: none;
   cursor: text;
+}
+
+
+input, textarea, select, button {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  font-size: 1.2em;
 }
