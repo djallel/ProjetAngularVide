@@ -10,5 +10,5 @@ import { throttle } from 'rxjs/operators';
 export class AppComponent {
   title = 'ProjetAngularVide';
 
-  
+
 }
