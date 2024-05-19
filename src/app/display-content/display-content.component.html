@@ -1,0 +1,5 @@
+<button (click)="toggleContent()">Afficher le contenu</button>
+<div *ngIf="isContentVisible" class="content">
+  <h2>Voici le contenu affiché</h2>
+  <p>Ceci est un paragraphe de contenu supplémentaire.</p>
+</div>
