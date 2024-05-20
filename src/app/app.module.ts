@@ -8,6 +8,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { PropertybindingETinterpolationComponent } from './propertybinding-etinterpolation/propertybinding-etinterpolation.component';
 import {FormsModule} from "@angular/forms";
 import { DirectivesComponent } from './directives/directives.component';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirectivesComponent } from './directives/directives.component';
     DisplayContentComponent,
     UserListComponent,
     PropertybindingETinterpolationComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
