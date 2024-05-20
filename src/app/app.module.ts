@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { DisplayContentComponent } from './display-content/display-content.component';
 import {HttpClientModule} from "@angular/common/http";
 import { UserListComponent } from './user-list/user-list.component';
+import { PropertybindingETinterpolationComponent } from './propertybinding-etinterpolation/propertybinding-etinterpolation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayContentComponent,
-    UserListComponent
+    UserListComponent,
+    PropertybindingETinterpolationComponent
   ],
   imports: [
     BrowserModule,
