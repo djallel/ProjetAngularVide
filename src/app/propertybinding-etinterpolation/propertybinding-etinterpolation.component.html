@@ -1,2 +1,8 @@
-<h1 class="color">{{ title }}</h1>
-<input class="color" [value]="title">
+<br>
+String interpolaation : <h1 class="color">{{ title }}</h1> <!--String interpollation -->
+<br>
+property bindig : <input class="color" [value]="title"> <!--propertyBinding-->
+<br>
+Rien du tout : <h2 class="color" [(ngModel)]="title">[(ngModel)]="title"</h2>
+<br>
+Two way binding : <input [(ngModel)]="title" class="color" placeholder="Enter your name"> <!-- two way binding-->

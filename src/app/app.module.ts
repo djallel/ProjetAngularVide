@@ -6,6 +6,7 @@ import { DisplayContentComponent } from './display-content/display-content.compo
 import {HttpClientModule} from "@angular/common/http";
 import { UserListComponent } from './user-list/user-list.component';
 import { PropertybindingETinterpolationComponent } from './propertybinding-etinterpolation/propertybinding-etinterpolation.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PropertybindingETinterpolationComponent } from './propertybinding-etint
   imports: [
     BrowserModule,
     HttpClientModule // Ajouter HttpClientModule ici
+    ,FormsModule // Ajouter FormsModule ici
   ],
   providers: [],
   bootstrap: [AppComponent]
