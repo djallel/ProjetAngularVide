@@ -1,0 +1,9 @@
+<div *ngIf="isVisible">Ceci est visible</div>
+<ul>
+  <li *ngFor="let item of items">{{ item }}+{{++i}}</li>
+</ul>
+
+<div>
+  <p>Current Count: {{ count }}</p>
+  <button (click)="increment()">Increment 4 Times</button>
+</div>

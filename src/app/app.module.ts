@@ -7,13 +7,15 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserListComponent } from './user-list/user-list.component';
 import { PropertybindingETinterpolationComponent } from './propertybinding-etinterpolation/propertybinding-etinterpolation.component';
 import {FormsModule} from "@angular/forms";
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayContentComponent,
     UserListComponent,
-    PropertybindingETinterpolationComponent
+    PropertybindingETinterpolationComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
