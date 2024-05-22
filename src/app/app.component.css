@@ -315,4 +315,12 @@ input, textarea, select, button {
   border-radius: 3px;
 }
 
+.highlight-text-end {
+  font-family: 'Roboto', sans-serif;
+  background-color: #9822ae;
+  color: #333;
+  padding: 5px;
+  border-radius: 3px;
+}
+
 

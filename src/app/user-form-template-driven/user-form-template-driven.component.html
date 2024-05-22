@@ -1,0 +1,44 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+  </div>
+
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" ngModel required min="1">
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+
+<div *ngIf="submitted">
+  <h3>Form Submitted</h3>
+  <div>Name: {{ formData.name }}</div>
+  <div>Email: {{ formData.email }}</div>
+  <div>Age: {{ formData.age }}</div>
+</div>
+<!--
+Détails de la syntaxe
+<form> : C'est la balise HTML standard pour créer un formulaire.
+
+#userForm="ngForm" :
+
+#userForm : C'est une variable de template locale.
+Elle permet de référencer le formulaire dans le template HTML.
+"ngForm" : C'est une directive Angular qui est utilisée pour gérer le formulaire.
+En associant cette directive à #userForm,
+Angular sait que userForm fait référence à l'objet NgForm.
+(ngSubmit)="onSubmit(userForm)" :
+
+(ngSubmit) : C'est un événement
+Angular qui se déclenche lorsque le formulaire est soumis.
+onSubmit(userForm) : Cette expression appelle la méthode
+onSubmit définie dans le composant TypeScript et passe l'objet userForm en argument.
+Cela permet d'accéder aux données du formulaire et à son état de validation dans le composant.
+-->
