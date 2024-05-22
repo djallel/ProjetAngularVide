@@ -9,7 +9,15 @@ import { PropertybindingETinterpolationComponent } from './propertybinding-etint
 import {FormsModule} from "@angular/forms";
 import { DirectivesComponent } from './directives/directives.component';
 import { ServiceComponent } from './service/service.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import {RouterModule, Routes} from "@angular/router";
+import { NavbarComponent } from './navbar/navbar.component';
 
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +25,18 @@ import { ServiceComponent } from './service/service.component';
     UserListComponent,
     PropertybindingETinterpolationComponent,
     DirectivesComponent,
-    ServiceComponent
+    ServiceComponent,
+    HomeComponent,
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule // Ajouter HttpClientModule ici
     ,FormsModule // Ajouter FormsModule ici
+    ,RouterModule.forRoot(routes)
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
