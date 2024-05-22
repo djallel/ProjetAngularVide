@@ -1,0 +1,39 @@
+
+/****/ Formulaire réactive MODE BASIC
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name">
+  <button type="submit">Submit</button>
+</form>
+
+/****/ Formulaire réactive MODE AVANCE EN BAS /*****/ avec touched dirty et invalid
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+    <div *ngIf="userForm.get('name')?.invalid && (userForm.get('name')?.dirty || userForm.get('name')?.touched)">
+      <small *ngIf="userForm.get('name')?.errors?.['required']">Name is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email">
+    <div *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+      <small *ngIf="userForm.get('email')?.errors?.['required']">Email is required.</small>
+      <small *ngIf="userForm.get('email')?.errors?.['email']">Email is invalid.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" type="number" formControlName="age">
+    <div *ngIf="userForm.get('age')?.invalid && (userForm.get('age')?.dirty || userForm.get('age')?.touched)">
+      <small *ngIf="userForm.get('age')?.errors?.['required']">Age is required.</small>
+      <small *ngIf="userForm.get('age')?.errors?.['min']">Age must be greater than 0.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
+

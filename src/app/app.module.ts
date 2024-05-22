@@ -14,6 +14,9 @@ import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from "@angular/router";
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserFormTemplateDrivenComponent } from './user-form-template-driven/user-form-template-driven.component';
+import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-formulaire.component';
+import { ReactiveFormsModule } from '@angular/forms'; // Importer ReactiveFormsModule
+
 
 
 const routes: Routes = [
@@ -31,13 +34,15 @@ const routes: Routes = [
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    UserFormTemplateDrivenComponent
+    UserFormTemplateDrivenComponent,
+    ReactiveFormulaireComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule // Ajouter HttpClientModule ici
+    BrowserModule
+    ,HttpClientModule // Ajouter HttpClientModule ici
     ,FormsModule // Ajouter FormsModule ici
     ,RouterModule.forRoot(routes)
+    ,ReactiveFormsModule // Ajouter ReactiveFormsModule ici
   ],
   exports: [RouterModule],
   providers: [],
