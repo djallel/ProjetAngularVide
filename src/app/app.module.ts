@@ -15,7 +15,9 @@ import {RouterModule, Routes} from "@angular/router";
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserFormTemplateDrivenComponent } from './user-form-template-driven/user-form-template-driven.component';
 import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-formulaire.component';
-import { ReactiveFormsModule } from '@angular/forms'; // Importer ReactiveFormsModule
+import { ReactiveFormsModule } from '@angular/forms';
+import {LazyLoadImageModule} from "ng-lazyload-image";
+import { LazyloadingimageComponent } from './lazyloadingimage/lazyloadingimage.component'; // Importer ReactiveFormsModule
 
 
 
@@ -35,7 +37,8 @@ const routes: Routes = [
     AboutComponent,
     NavbarComponent,
     UserFormTemplateDrivenComponent,
-    ReactiveFormulaireComponent
+    ReactiveFormulaireComponent,
+    LazyloadingimageComponent
   ],
   imports: [
     BrowserModule
@@ -43,6 +46,7 @@ const routes: Routes = [
     ,FormsModule // Ajouter FormsModule ici
     ,RouterModule.forRoot(routes)
     ,ReactiveFormsModule // Ajouter ReactiveFormsModule ici
+    ,LazyLoadImageModule
   ],
   exports: [RouterModule],
   providers: [],
