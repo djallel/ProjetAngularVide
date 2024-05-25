@@ -106,6 +106,16 @@
   <app-childcomponent  [childData]="parentData"></app-childcomponent>
 </div>
 
+<!--@output-->
+<!-- -->
+<br>  <h1 class="highlight-text">Exercice @output</h1>
+
+<div>
+  <h1>Parent Component</h1>
+  <app-childcomponent (dataEmitter)="receiveData($event)"></app-childcomponent>
+  <p>{{ receivedData }}</p>
+</div>
+
 <br>  <h1 class="highlight-text-end">Fin</h1>
 </body>
 </html>
