@@ -17,7 +17,8 @@ import { UserFormTemplateDrivenComponent } from './user-form-template-driven/use
 import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-formulaire.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {LazyLoadImageModule} from "ng-lazyload-image";
-import { LazyloadingimageComponent } from './lazyloadingimage/lazyloadingimage.component'; // Importer ReactiveFormsModule
+import { LazyloadingimageComponent } from './lazyloadingimage/lazyloadingimage.component';
+import { ChildcomponentComponent } from './childcomponent/childcomponent.component'; // Importer ReactiveFormsModule
 
 
 
@@ -38,7 +39,8 @@ const routes: Routes = [
     NavbarComponent,
     UserFormTemplateDrivenComponent,
     ReactiveFormulaireComponent,
-    LazyloadingimageComponent
+    LazyloadingimageComponent,
+    ChildcomponentComponent
   ],
   imports: [
     BrowserModule

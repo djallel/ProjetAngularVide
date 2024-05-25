@@ -9,6 +9,7 @@ import { throttle } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'ProjetAngularVide';
+  parentData = 'Data from parent';
 
 
 }
