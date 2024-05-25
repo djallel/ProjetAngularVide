@@ -8,6 +8,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class ReactiveFormulaireComponent implements OnInit {
   userForm: FormGroup;
+  parentData = 'Data from parent';
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
       name: ['', [Validators.required]],
