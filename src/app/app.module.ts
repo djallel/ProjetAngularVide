@@ -18,7 +18,10 @@ import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-form
 import { ReactiveFormsModule } from '@angular/forms';
 import {LazyLoadImageModule} from "ng-lazyload-image";
 import { LazyloadingimageComponent } from './lazyloadingimage/lazyloadingimage.component';
-import { ChildcomponentComponent } from './childcomponent/childcomponent.component'; // Importer ReactiveFormsModule
+import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
+import { SubjectFeatureAComponent } from './subject-feature-a/subject-feature-a.component';
+import { SubjectFeatureBComponent } from './subject-feature-b/subject-feature-b.component';
+import {SharedService} from "./shared.service"; // Importer ReactiveFormsModule
 
 
 
@@ -40,7 +43,9 @@ const routes: Routes = [
     UserFormTemplateDrivenComponent,
     ReactiveFormulaireComponent,
     LazyloadingimageComponent,
-    ChildcomponentComponent
+    ChildcomponentComponent,
+    SubjectFeatureAComponent,
+    SubjectFeatureBComponent
   ],
   imports: [
     BrowserModule
@@ -51,7 +56,7 @@ const routes: Routes = [
     ,LazyLoadImageModule
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
