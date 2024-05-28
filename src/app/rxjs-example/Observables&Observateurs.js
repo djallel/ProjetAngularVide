@@ -19,4 +19,8 @@ const observer = {
 const subscription = observable.subscribe(observer);
 
 // Pour se désabonner (si nécessaire)
-subscription.unsubscribe();
+// Après un certain temps, désabonnez-vous pour éviter les fuites de mémoire
+setTimeout(() => {
+  subscription.unsubscribe();
+}, 5000);
+
