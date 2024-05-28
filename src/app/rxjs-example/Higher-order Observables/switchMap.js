@@ -1,4 +1,4 @@
-//switchMap Annule les Observables précédents et n'émet que le dernier Observable.
+/**switchMap Annule les Observables précédents et n'émet que le dernier Observable.*/
 
 const { of, interval } = require('rxjs');
 const { switchMap, take } = require('rxjs/operators');
