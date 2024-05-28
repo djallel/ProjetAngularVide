@@ -16,5 +16,7 @@ const observer = {
 };
 
 // S'abonner à l'Observable avec l'Observer
-observable.subscribe(observer);
+const subscription = observable.subscribe(observer);
 
+// Pour se désabonner (si nécessaire)
+subscription.unsubscribe();
