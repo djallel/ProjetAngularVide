@@ -12,3 +12,4 @@ interval(1000).pipe(
 // Switch to 0
 // Switch to 1
 // Switch to 2
+/**switchMap Annule les Observables précédents et n'émet que le dernier Observable.*/

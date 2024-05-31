@@ -21,9 +21,16 @@ import { LazyloadingimageComponent } from './lazyloadingimage/lazyloadingimage.c
 import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 import { SubjectFeatureAComponent } from './subject-feature-a/subject-feature-a.component';
 import { SubjectFeatureBComponent } from './subject-feature-b/subject-feature-b.component';
-import {SharedService} from "./shared.service"; // Importer ReactiveFormsModule
+import {SharedService} from "./shared.service";
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { TodoListComponent } from './components/todo-list/todo-list.component'; // Importer ReactiveFormsModule
 
-
+import { todoReducer } from './store/todo.reducer';
+import { TodoEffects } from './store/todo.effects';
+import { TodoService } from './services/todo.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,7 +52,8 @@ const routes: Routes = [
     LazyloadingimageComponent,
     ChildcomponentComponent,
     SubjectFeatureAComponent,
-    SubjectFeatureBComponent
+    SubjectFeatureBComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule
@@ -53,10 +61,16 @@ const routes: Routes = [
     ,FormsModule // Ajouter FormsModule ici
     ,RouterModule.forRoot(routes)
     ,ReactiveFormsModule // Ajouter ReactiveFormsModule ici
-    ,LazyLoadImageModule
+    ,LazyLoadImageModule, StoreModule.forRoot({}, {}), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+
+    ,BrowserModule
+    ,StoreModule.forRoot({ todo: todoReducer })
+    ,EffectsModule.forRoot([TodoEffects])
+    ,StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: true }) // configure store devtools
+
   ],
   exports: [RouterModule],
-  providers: [SharedService],
+  providers: [SharedService,TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+<!-- src/app/components/todo-list/todo-list.component.html -->
+<div>
+  <h1>Liste des tâches</h1>
+  <button (click)="addTodo()">Ajouter une tâche</button>
+  <ul>
+    <li *ngFor="let todo of todos$ | async">
+      {{ todo.title }}
+      <button (click)="removeTodo(todo.id)">Supprimer</button>
+    </li>
+  </ul>
+</div>
