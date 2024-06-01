@@ -14,7 +14,11 @@ export const initialState: TodoState = {
   todos: []
 };
 
+/**
+ * Reducer : Le reducer est une fonction qui prend l'état actuel et une action, puis retourne un nouvel état.
+ */
 // 3. Création du reducer
+
 export const todoReducer = createReducer(
   initialState,
 

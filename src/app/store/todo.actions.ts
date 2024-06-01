@@ -2,6 +2,10 @@
 import { createAction, props } from '@ngrx/store';
 import { Todo } from '../models/todo.model';
 
+/**
+ * Actions : Les actions sont des objets qui décrivent un événement unique que quelque chose
+ * s'est produit (par exemple, une commande utilisateur, une réponse serveur).
+ */
 export const loadTodos = createAction('[Todo] Load Todos');
 export const loadTodosSuccess = createAction(
   '[Todo] Load Todos Success',

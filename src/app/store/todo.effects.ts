@@ -8,6 +8,10 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 import { TodoService } from '../services/todo.service';
 import { loadTodos, loadTodosSuccess, loadTodosFailure } from './todo.actions';
 
+/**
+ * Effects : Les effects sont utilisés pour gérer les effets secondaires,
+ * tels que les requêtes HTTP, et pour dispatcher d'autres actions en réponse.
+ */
 // Déclare une classe injectable pour permettre l'injection de dépendances.
 @Injectable()
 export class TodoEffects {
