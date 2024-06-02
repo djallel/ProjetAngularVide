@@ -1,7 +1,7 @@
 // src/app/store/todo.reducer.ts
 
 import { createReducer, on } from '@ngrx/store';
-import { Todo } from '../models/todo.model';
+import { Todo } from '../../models/todo.model';
 import { loadTodosSuccess, addTodo, removeTodo } from './todo.actions';
 
 // 1. Définition de l'interface de l'état
@@ -31,3 +31,4 @@ export const todoReducer = createReducer(
   // 3c. Gestion de l'action removeTodo
   on(removeTodo, (state, { id }) => ({ ...state, todos: state.todos.filter(todo => todo.id !== id) }))
 );
+

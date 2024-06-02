@@ -5,7 +5,7 @@ import { of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 
 // Importation du service Todo et des actions liées aux todos.
-import { TodoService } from '../services/todo.service';
+import { TodoService } from '../../services/todo.service';
 import { loadTodos, loadTodosSuccess, loadTodosFailure } from './todo.actions';
 
 /**

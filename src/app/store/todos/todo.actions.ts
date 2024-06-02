@@ -1,6 +1,6 @@
 // src/app/store/todo.actions.ts
 import { createAction, props } from '@ngrx/store';
-import { Todo } from '../models/todo.model';
+import { Todo } from '../../models/todo.model';
 
 /**
  * Actions : Les actions sont des objets qui décrivent un événement unique que quelque chose

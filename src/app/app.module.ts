@@ -28,9 +28,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { TodoListComponent } from './components/todo-list/todo-list.component'; // Importer ReactiveFormsModule
 
-import { todoReducer } from './store/todo.reducer';
-import { TodoEffects } from './store/todo.effects';
+
+import { todoReducer } from './store/todos/todo.reducer';
+import { TodoEffects } from './store/todos/todo.effects';
 import { TodoService } from './services/todo.service';
+import {ProductEffects} from "./store/products/products.effects";
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,7 +56,8 @@ const routes: Routes = [
     ChildcomponentComponent,
     SubjectFeatureAComponent,
     SubjectFeatureBComponent,
-    TodoListComponent
+    TodoListComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule
@@ -65,8 +69,9 @@ const routes: Routes = [
 
     ,BrowserModule
     ,StoreModule.forRoot({ todo: todoReducer })
-    ,EffectsModule.forRoot([TodoEffects])
+    ,EffectsModule.forRoot([TodoEffects,ProductEffects])
     ,StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: true }) // configure store devtools
+
 
   ],
   exports: [RouterModule],

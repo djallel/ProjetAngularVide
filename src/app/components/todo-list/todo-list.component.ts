@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Todo } from '../../models/todo.model';
-import { loadTodos, addTodo, removeTodo } from '../../store/todo.actions';
-import { selectTodos } from '../../store/todo.selectors';
+import { loadTodos, addTodo, removeTodo } from '../../store/todos/todo.actions';
+import { selectTodos } from '../../store/todos/todo.selectors';
 
 @Component({
   selector: 'app-todo-list',

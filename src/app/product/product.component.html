@@ -1,0 +1,35 @@
+<div>
+  <h1>Product List</h1>
+  <button (click)="loadProducts()">Load Products</button>
+  <ul>
+    <li *ngFor="let product of products$ | async">
+      {{ product.name }} - {{ product.price }} $
+      <button (click)="removeProduct(product.id)">Remove</button>
+    </li>
+  </ul>
+  <div>
+    <input [(ngModel)]="newProductName" placeholder="Product Name" />
+    <input [(ngModel)]="newProductPrice" placeholder="Product Price" />
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+</div>
+
+
+<div>
+  <h1>Product List</h1>
+  <button (click)="loadProducts()">Load Products</button>
+  <ul>
+    <li *ngFor="let product of products$ | async">
+      {{ product.name }} - {{ product.price }} $
+      <button (click)="removeProduct(product.id)">Remove</button>
+    </li>
+  </ul>
+  <div *ngIf="error$ | async as error" class="error">
+    {{ error }}
+  </div>
+  <div>
+    <input [(ngModel)]="newProductName" placeholder="Product Name" />
+    <input [(ngModel)]="newProductPrice" placeholder="Product Price" />
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+</div>
